@@ -3,7 +3,7 @@
 import type { SanityDocument } from '@sanity/client';
 import { useLiveQuery } from '@sanity/preview-kit';
 import Posts from './Posts';
-import { postsQuery } from '../../sanity/lib/queries';
+import { postsQuery } from '../../../sanity/lib/queries';
 
 
 export default function PreviewPosts(

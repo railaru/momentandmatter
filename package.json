@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.0.7",
+    "@radix-ui/react-dialog": "^1.0.4",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.16.7",
     "@types/node": "20.6.3",

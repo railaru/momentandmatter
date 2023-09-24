@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Hero from '@/components/Hero';
+import Hero from '@/components/containers/Hero';
 
 export const metadata: Metadata = {
     title: 'Home - Moment & Matter',

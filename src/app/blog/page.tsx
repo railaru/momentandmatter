@@ -1,8 +1,8 @@
 import { SanityDocument } from 'next-sanity';
 import { draftMode } from 'next/headers';
-import PreviewProvider from '@/components/PreviewProvider';
-import PreviewPosts from '@/components/PreviewPosts';
-import Posts from '@/components/Posts';
+import PreviewProvider from '@/components/containers/PreviewProvider';
+import PreviewPosts from '@/components/containers/PreviewPosts';
+import Posts from '@/components/containers/Posts';
 import { sanityFetch, token } from '../../../sanity/lib/sanityFetch';
 import { postsQuery } from '../../../sanity/lib/queries';
 
