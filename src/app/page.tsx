@@ -1,9 +1,21 @@
 import { Metadata } from 'next';
+import Hero from '@/components/Hero';
 
 export const metadata: Metadata = {
     title: 'Home - Moment & Matter',
 };
 
 export default async function Home() {
-    return <h1 className="font-gascogne">Hello World</h1>;
+    return (
+        <>
+            <Hero
+                imageUrl={'/assets/images/hero-img.jpeg'}
+                title={'Elements of Productivity'}
+                subtitle={'Apparel for remote work.'}
+                link={
+                    { url: '/', text: 'Get updates' }
+                }
+            />
+        </>
+    );
 }

@@ -14,13 +14,15 @@ export default function Navigation({ variants, ...props }: Props) {
             className={
                 cn(
                     'flex items-center gap-4', {
-                        'bg-transparent': variants === 'transparent',
+                        'bg-transparent absolute top-0 left-0 text-white z-[2] p-4': variants === 'transparent',
                         'bg-white': variants === 'whiteBackground'
                     }, props.className
                 )
             }
         >
-            <HorizontalLogo/>
+            <Link href={'/'} className="inline-block">
+                <HorizontalLogo/>
+            </Link>
 
             <nav className="relative top-[1px]">
                 <ul className="flex items-center gap-4 text-sm">

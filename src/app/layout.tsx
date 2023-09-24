@@ -28,13 +28,11 @@ export default function RootLayout(
     return (
         <html lang="en">
         <body className={gascogne.variable}>
-
-        <Navigation/>
+        <Navigation variants="transparent"/>
 
         {children}
 
         <Footer/>
-
         </body>
         </html>
     );

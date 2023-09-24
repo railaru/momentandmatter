@@ -4,6 +4,7 @@
 
 .font-gascogne {
     font-family: var(--font-gascogne);
+    letter-spacing: 1px;
 }
 
 body {
