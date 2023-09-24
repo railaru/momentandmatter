@@ -1,7 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
-import Navigation from '@/components/containers/Navigation';
+import Header from '@/components/containers/Header';
 import Footer from '@/components/containers/Footer';
 import localFont from 'next/font/local';
 
@@ -28,7 +28,7 @@ export default function RootLayout(
     return (
         <html lang="en">
         <body className={gascogne.variable}>
-        <Navigation variants="transparent"/>
+        <Header variants="transparent"/>
 
         {children}
 

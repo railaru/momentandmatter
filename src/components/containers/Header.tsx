@@ -9,8 +9,7 @@ type Props = HTMLAttributes<HTMLElement> & {
     variants?: 'transparent' | 'whiteBackground'
 }
 
-export default function Navigation({ variants, ...props }: Props) {
-
+export default function Header({ variants, ...props }: Props) {
     const data = [
         {
             url: '/about',
@@ -51,16 +50,16 @@ export default function Navigation({ variants, ...props }: Props) {
             </nav>
 
             <Sheet>
-                <SheetTrigger className="md:hidden" aria-label="Hamburger menu open">
+                <SheetTrigger className="md:hidden p-4 -m-4" aria-label="Hamburger menu open">
                     <HamburgerIcon/>
                 </SheetTrigger>
 
                 <SheetContent>
-                    <ul className="flex items-col gap-4 text-sm">
+                    <ul className="flex flex-col gap-1 text-sm">
                         {
                             data.map(((item, index) => (
                                 <li key={index}>
-                                    <Link href={item.url}>{item.text}</Link>
+                                    <Link className="inline-block w-full py-4" href={item.url}>{item.text}</Link>
                                 </li>
                             )))
                         }
