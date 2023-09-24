@@ -16,9 +16,9 @@ export default async function Home() {
         }
     ).catch(() => undefined);
 
-    return (
-        <>
-            {data?.body && <CustomPortableText data={data}/>}
-        </>
-    );
+    if ( !data?.body) {
+        return null;
+    }
+
+    return <CustomPortableText data={data}/>;
 }
