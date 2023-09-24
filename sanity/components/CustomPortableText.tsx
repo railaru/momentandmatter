@@ -6,9 +6,6 @@ import imageUrlBuilder from '@sanity/image-url';
 import { client } from '../lib/client';
 import { SanityImageSource } from '@sanity/asset-utils';
 
-type Props = {
-    data: SanityDocument
-}
 
 const imageBuilder = imageUrlBuilder(client);
 
@@ -43,6 +40,8 @@ const components = {
     },
 };
 
-export default function CustomPortableText({ data }: Props) {
+export default function CustomPortableText({ data }: {
+    data: SanityDocument
+}) {
     return <PortableText value={data.body} components={components}/>;
 }
