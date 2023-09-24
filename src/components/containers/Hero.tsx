@@ -31,7 +31,8 @@ export default function Hero(
             />
 
             <div
-                className="flex flex-col items-center gap-6 absolute top-0 left-0 text-white z-[1] left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] text-center w-full px-4"
+                className="flex absolute top-0 left-0 w-full h-full text-white items-center justify-center flex-col z-[2] gap-5"
+                style={{ justifyContent: 'center' }}
             >
                 <h1 className="text-4xl font-gascogne">
                     {title}

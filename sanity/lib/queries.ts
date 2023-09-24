@@ -14,3 +14,9 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
     "params": { "slug": slug.current }
   }`;
+
+
+// Get a single page by its slug
+export const pageQuery = groq`*[_type == "page" && slug.current == $slug][0]{
+    title, body
+    }`;

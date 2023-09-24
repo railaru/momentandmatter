@@ -27,7 +27,7 @@ export default function Header({ variants, ...props }: Props) {
             className={
                 cn(
                     'flex items-center gap-4 justify-between md:justify-start w-full', {
-                        'bg-transparent absolute top-0 left-0 text-white z-[2] p-4': variants === 'transparent',
+                        'bg-transparent absolute top-0 left-0 text-white z-[3] p-4': variants === 'transparent',
                         'bg-white': variants === 'whiteBackground'
                     }, props.className
                 )

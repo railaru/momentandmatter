@@ -1,21 +1,24 @@
 import { Metadata } from 'next';
-import Hero from '@/components/containers/Hero';
+import { sanityFetch } from '../../sanity/lib/sanityFetch';
+import { pageQuery } from '../../sanity/lib/queries';
+import { SanityDocument } from '@sanity/client';
+import CustomPortableText from '../../sanity/components/CustomPortableText';
 
 export const metadata: Metadata = {
     title: 'Home - Moment & Matter',
 };
 
 export default async function Home() {
+    const data = await sanityFetch<SanityDocument>(
+        {
+            query: pageQuery,
+            params: { slug: 'homepage' }
+        }
+    ).catch(() => undefined);
+
     return (
         <>
-            <Hero
-                imageUrl={'/assets/images/hero-img.jpeg'}
-                title={'Elements of Productivity'}
-                subtitle={'Apparel for remote work.'}
-                link={
-                    { url: '/', text: 'Get updates' }
-                }
-            />
+            {data?.body && <CustomPortableText data={data}/>}
         </>
     );
 }
