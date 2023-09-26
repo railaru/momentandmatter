@@ -49,7 +49,6 @@ export default defineType({
             type: 'blockContent',
         }),
     ],
-
     preview: {
         select: {
             title: 'title',

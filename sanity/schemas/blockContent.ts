@@ -74,5 +74,8 @@ export default defineType({
         defineArrayMember({
             type: 'hero',
         }),
+        defineArrayMember({
+            type: 'textGrid',
+        }),
     ],
 });

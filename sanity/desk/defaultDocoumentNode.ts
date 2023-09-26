@@ -3,6 +3,16 @@ import Iframe from 'sanity-plugin-iframe-pane';
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, { schemaType }) => {
     switch (schemaType) {
+        case `page`:
+            return S.document().views([
+                S.view.form(),
+                S.view
+                .component(Iframe)
+                .options({
+                    url: 'http://localhost:3000/api/preview'
+                })
+                .title('Preview'),
+            ]);
         case `post`:
             return S.document().views([
                 S.view.form(),

@@ -7,6 +7,7 @@ import author from './schemas/author';
 import page from './schemas/page';
 import link from './schemas/link';
 import hero from './schemas/hero';
+import textGrid from './schemas/textGrid';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
     types: [
@@ -16,6 +17,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
         category,
         blockContent,
         link,
-        hero
+        hero,
+        textGrid,
     ],
 };

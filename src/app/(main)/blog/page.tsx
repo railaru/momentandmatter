@@ -3,8 +3,8 @@ import { draftMode } from 'next/headers';
 import PreviewProvider from '@/components/containers/PreviewProvider';
 import PreviewPosts from '@/components/containers/PreviewPosts';
 import Posts from '@/components/containers/Posts';
-import { sanityFetch, token } from '../../../sanity/lib/sanityFetch';
-import { postsQuery } from '../../../sanity/lib/queries';
+import { sanityFetch, token } from '../../../../sanity/lib/sanityFetch';
+import { postsQuery } from '../../../../sanity/lib/queries';
 
 export default async function Home() {
     const posts = await sanityFetch<SanityDocument[]>(

@@ -5,7 +5,7 @@ import Hero from '@/components/containers/Hero';
 import imageUrlBuilder from '@sanity/image-url';
 import { client } from '../lib/client';
 import { SanityImageSource } from '@sanity/asset-utils';
-
+import TextGrid, { TextGridProps } from '@/components/containers/TextGrid';
 
 const imageBuilder = imageUrlBuilder(client);
 
@@ -34,9 +34,28 @@ function HeroSanity(props: {
     );
 }
 
+function TextGridSanity(props: {
+    value: TextGridProps;
+}) {
+    const {
+        items,
+        textColor,
+        backgroundColor,
+    } = props.value;
+
+    return (
+        <TextGrid
+            items={items}
+            textColor={textColor}
+            backgroundColor={backgroundColor}
+        />
+    );
+}
+
 const components = {
     types: {
         hero: HeroSanity,
+        textGrid: TextGridSanity,
     },
 };
 

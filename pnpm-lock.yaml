@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@portabletext/react': ^3.0.7
   '@radix-ui/react-dialog': ^1.0.4
+  '@sanity/color-input': ^3.1.0
   '@sanity/image-url': ^1.0.2
   '@sanity/vision': ^3.16.7
   '@tailwindcss/typography': ^0.5.10
@@ -34,6 +35,7 @@ specifiers:
 dependencies:
   '@portabletext/react': 3.0.7_react@18.2.0
   '@radix-ui/react-dialog': 1.0.4_hk7n5f7tmnkq3232mkfsgkk6nu
+  '@sanity/color-input': 3.1.0_dkwzw75oaf5z5dlbqqpmeq7y3e
   '@sanity/image-url': 1.0.2
   '@sanity/vision': 3.16.7_wlbqgtd3hsquwwfqazg47kay4q
   '@types/node': 20.6.3
@@ -972,6 +974,14 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: false
 
+  /@icons/material/0.2.4_react@18.2.0:
+    resolution: {integrity: sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@jridgewell/gen-mapping/0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
     engines: {node: '>=6.0.0'}
@@ -1510,6 +1520,27 @@ packages:
       rxjs: 7.8.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@sanity/color-input/3.1.0_dkwzw75oaf5z5dlbqqpmeq7y3e:
+    resolution: {integrity: sha512-eHLrULBA53OIM/76JeEkQdM72gnBOR/CjnTpQUcu+x6PB6d4lghkeU75ESLLIISdyTc4U6cO2N6CMW8bDNuUVg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: ^18
+      sanity: ^3
+      styled-components: ^5.2
+    dependencies:
+      '@sanity/icons': 2.4.1_react@18.2.0
+      '@sanity/incompatible-plugin': 1.0.4_biqbaboplfbrettd7655fr4n2y
+      '@sanity/ui': 1.8.2_wlbqgtd3hsquwwfqazg47kay4q
+      lodash: 4.17.21
+      react: 18.2.0
+      react-color: 2.19.3_react@18.2.0
+      sanity: 3.16.7_fzlgketqiu63gi3stposow42yy
+      styled-components: 5.2.3_biqbaboplfbrettd7655fr4n2y
+    transitivePeerDependencies:
+      - react-dom
+      - react-is
     dev: false
 
   /@sanity/color/2.2.5:
@@ -4537,6 +4568,10 @@ packages:
       p-locate: 5.0.0
     dev: false
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
   /lodash.castarray/4.4.0:
     resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
     dev: true
@@ -4616,6 +4651,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       semver: 6.3.1
+    dev: false
+
+  /material-colors/1.2.6:
+    resolution: {integrity: sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==}
     dev: false
 
   /md5-o-matic/0.1.1:
@@ -5320,6 +5359,21 @@ packages:
       react: 18.2.0
     dev: false
 
+  /react-color/2.19.3_react@18.2.0:
+    resolution: {integrity: sha512-LEeGE/ZzNLIsFWa1TMe8y5VYqr7bibneWmvJwm1pCn/eNmrabWDh659JSPn9BuaMpEfU83WTOJfnCcjDZwNQTA==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      '@icons/material': 0.2.4_react@18.2.0
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      material-colors: 1.2.6
+      prop-types: 15.8.1
+      react: 18.2.0
+      reactcss: 1.2.3_react@18.2.0
+      tinycolor2: 1.6.0
+    dev: false
+
   /react-copy-to-clipboard/5.1.0_react@18.2.0:
     resolution: {integrity: sha512-k61RsNgAayIJNoy9yDsYzDe/yAZAzEbEgcz3DZMhF686LEyukcE1hzurxe85JandPUG+yTfGVFzuEw3xt8WP/A==}
     peerDependencies:
@@ -5467,6 +5521,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /reactcss/1.2.3_react@18.2.0:
+    resolution: {integrity: sha512-KiwVUcFu1RErkI97ywr8nvx8dNOpT03rbnma0SSalTYjkrPYaEajR4a/MRt6DZ46K6arDRbWMNHF+xH7G7n/8A==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      lodash: 4.17.21
+      react: 18.2.0
     dev: false
 
   /read-cache/1.0.0:
@@ -6333,6 +6396,10 @@ packages:
 
   /tiny-warning/1.0.3:
     resolution: {integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==}
+    dev: false
+
+  /tinycolor2/1.6.0:
+    resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
     dev: false
 
   /to-fast-properties/2.0.0:
