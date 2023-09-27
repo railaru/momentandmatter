@@ -51,7 +51,7 @@ export default function Header({ variants, ...props }: Props) {
 
             <Sheet>
                 <SheetTrigger className="md:hidden p-4 -m-4" aria-label="Hamburger menu open">
-                    <HamburgerIcon/>
+                    <HamburgerIcon className="stroke-white"/>
                 </SheetTrigger>
 
                 <SheetContent>

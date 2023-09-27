@@ -1,10 +1,12 @@
 import { HTMLAttributes } from 'react';
 import { SanityColor } from '@/types';
+import { SanityDocument } from '@sanity/client';
+import { PortableText } from '@portabletext/react';
 
 export type TextGridProps = {
     items: {
         title: string;
-        description: string;
+        richText: SanityDocument;
     }[];
     textColor?: SanityColor;
     backgroundColor?: SanityColor;
@@ -37,7 +39,14 @@ export default function TextGrid(
                         <div key={index}>
                             <h3 className="text-3xl font-gascogne">{item.title}</h3>
 
-                            <p className="mt-4">{item.description}</p>
+                            <div
+                                className="mt-4 prose"
+                                style={{
+                                    color: textColor?.hex || '#fff',
+                                }}
+                            >
+                                <PortableText value={item.richText}/>
+                            </div>
                         </div>
                     ))
                 }

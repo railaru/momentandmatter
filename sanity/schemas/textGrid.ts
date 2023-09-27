@@ -1,5 +1,4 @@
 import { defineType } from 'sanity';
-import { truncateString } from '@/lib/utils';
 
 export default defineType({
     title: 'Text grid',
@@ -18,11 +17,13 @@ export default defineType({
                             title: 'Title',
                             name: 'title',
                             type: 'string',
+                            validation: Rule => Rule.required(),
                         },
                         {
-                            title: 'Description',
-                            name: 'description',
-                            type: 'text',
+                            title: 'Rich text',
+                            name: 'richText',
+                            type: 'blockContent',
+                            validation: Rule => Rule.required(),
                         }
                     ]
                 }
@@ -62,10 +63,6 @@ export default defineType({
         prepare(value) {
             return {
                 title: value?.blocks?.[0]?.title ? value.blocks[0].title : 'No title',
-                subtitle:
-                    value?.blocks?.[0].description ?
-                        truncateString(value?.blocks?.[0]?.description, 50) :
-                        'No description',
                 icon: () => '📝'
             };
         }
